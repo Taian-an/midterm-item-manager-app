@@ -1,8 +1,8 @@
-import ItemManager from "./item-manager-app"
+import App from './App.jsx'
 
 function App() {
   return (
-    <ItemManager/>
+    <App/>
   )
 }
 
