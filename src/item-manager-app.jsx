@@ -7,7 +7,7 @@ import deleteIcon from './assets/delete.svg';
 const ItemManager = () => {
     const [items, setItems] = useState([]);
     const [name, setName] = useState("");
-    const [category, setCategory] = useState(""); [cite: 94]
+    const [category, setCategory] = useState(""); 
     const [price, setPrice] = useState("");
     const [error, setError] = useState("");
     
@@ -19,26 +19,26 @@ const ItemManager = () => {
 
     const handleAddItem = () => {
         if (!name.trim()) {
-            setError("Item name must not be empty"); [cite: 101]
+            setError("Item name must not be empty"); 
             return;
         }
         const isDuplicate = items.some(
             (item) => item.name.toLowerCase() === name.toLowerCase()
         ); [cite: 97]
         if (isDuplicate) {
-            setError("Item must not be duplicated"); [cite: 102]
+            setError("Item must not be duplicated"); 
             return;
         }
         if (!category){
-            setError("Please select a category"); [cite: 103]
+            setError("Please select a category"); 
             return;
         }
         if (price === "" || parseFloat(price) < 0){
-            setError("Price must not be less than 0"); [cite: 104]
+            setError("Price must not be less than 0"); 
             return;
         }
 
-        const newId = items.length > 0 ? Math.max(...items.map((item) => item.id)) + 1 : 1; [cite: 105, 140]
+        const newId = items.length > 0 ? Math.max(...items.map((item) => item.id)) + 1 : 1;
 
         const newItem = {
             id: newId,
@@ -55,7 +55,7 @@ const ItemManager = () => {
     }
 
     const handleDeleteItem = (id) => {
-        setItems(items.filter((item) => item.id !== id)); [cite: 107]
+        setItems(items.filter((item) => item.id !== id));
     };
 
     return (
@@ -77,12 +77,12 @@ const ItemManager = () => {
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>
-                                <img src={categoryIcons[item.category]} alt={item.category} width="20" /> [cite: 136]
+                                <img src={categoryIcons[item.category]} alt={item.category} width="20" /> 
                             </td>
                             <td>{item.price}</td>
                             <td>
                                 <button onClick={() => handleDeleteItem(item.id)} style={{ border: 'none', background: 'none', cursor: 'pointer' }}>
-                                    <img src={deleteIcon} alt="Delete" width="16" /> [cite: 106]
+                                    <img src={deleteIcon} alt="Delete" width="16" /> 
                                 </button>
                             </td>
                         </tr>
@@ -95,9 +95,9 @@ const ItemManager = () => {
                         <td>
                             <select value={category} onChange={(e) => setCategory(e.target.value)}>
                                 <option value="">Select Category</option>
-                                <option value="Stationary">Stationary</option> [cite: 91]
-                                <option value="Kitchenware">Kitchenware</option> [cite: 92]
-                                <option value="Appliance">Appliance</option> [cite: 93]
+                                <option value="Stationary">Stationary</option> 
+                                <option value="Kitchenware">Kitchenware</option> 
+                                <option value="Appliance">Appliance</option> 
                             </select>
                         </td>
                         <td>
