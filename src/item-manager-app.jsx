@@ -1,8 +1,8 @@
 import { useState } from 'react'; 
-import inkPen from "../assets/ink_pen.svg"; 
-import flatware from "../assets/flatware.svg"; 
-import electricalServices from "../assets/electrical_services.svg";
-import deleteIcon from '../assets/delete.svg'; 
+import inkPen from "./assets/ink_pen.svg"; 
+import flatware from "./assets/flatware.svg"; 
+import electricalServices from "./assets/electrical_services.svg";
+import deleteIcon from './assets/delete.svg';
 
 const ItemManager = () => {
     const [items, setItems] = useState([]);
