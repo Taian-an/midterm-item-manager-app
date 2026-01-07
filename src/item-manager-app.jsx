@@ -1,9 +1,8 @@
-import inkPen from "../assets/ink_pen.svg";
+import { useState } from 'react'; 
+import inkPen from "../assets/ink_pen.svg"; 
+import flatware from "../assets/flatware.svg"; 
 import electricalServices from "../assets/electrical_services.svg";
-import deleteIcon from '../assets/delete.svg';
-import laundryService from "../assets/laundry_service.svg";
-import plumbingService from "../assets/plumbing_service.svg";
-import { use } from "react";
+import deleteIcon from '../assets/delete.svg'; 
 
 const ItemManager = () => {
     const [items, setItems] = useState([]);
