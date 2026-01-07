@@ -2,7 +2,7 @@ import { useState } from 'react';
 import inkPen from "./assets/ink_pen.svg"; 
 import flatware from "./assets/flatware.svg"; 
 import electricalServices from "./assets/electrical_services.svg";
-import deleteIcon from './assets/delete.svg';
+import deleteIcon from './assets/delete.svg'; 
 
 const ItemManager = () => {
     const [items, setItems] = useState([]);
@@ -24,7 +24,7 @@ const ItemManager = () => {
         }
         const isDuplicate = items.some(
             (item) => item.name.toLowerCase() === name.toLowerCase()
-        ); [cite: 97]
+        ); 
         if (isDuplicate) {
             setError("Item must not be duplicated"); 
             return;
@@ -38,7 +38,7 @@ const ItemManager = () => {
             return;
         }
 
-        const newId = items.length > 0 ? Math.max(...items.map((item) => item.id)) + 1 : 1;
+        const newId = items.length > 0 ? Math.max(...items.map((item) => item.id)) + 1 : 1; 
 
         const newItem = {
             id: newId,
@@ -47,7 +47,7 @@ const ItemManager = () => {
             price: parseFloat(price).toFixed(2),
         };
         
-        setItems([...items, newItem]); [cite: 89]
+        setItems([...items, newItem]); 
         setName("");
         setCategory("");
         setPrice("");
@@ -55,12 +55,12 @@ const ItemManager = () => {
     }
 
     const handleDeleteItem = (id) => {
-        setItems(items.filter((item) => item.id !== id));
+        setItems(items.filter((item) => item.id !== id)); 
     };
 
     return (
         <div style={{ padding: '20px' }}>
-            <h2>Item Management</h2> [cite: 70]
+            <h2>Item Management</h2> 
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
                 <thead>
                     <tr style={{ borderBottom: '1px solid #ccc' }}>
@@ -87,7 +87,7 @@ const ItemManager = () => {
                             </td>
                         </tr>
                     ))}
-                    <tr> [cite: 85]
+                    <tr> 
                         <td></td>
                         <td>
                             <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Item Name" />
@@ -111,7 +111,7 @@ const ItemManager = () => {
                     </tr>
                 </tbody>
             </table>
-            {error && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '10px' }}>{error}</p>} [cite: 100]
+            {error && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '10px' }}>{error}</p>} 
         </div>
     );
 };
