@@ -1,4 +1,4 @@
-import ItemManager from "./components/item-manager-app"
+import ItemManager from "./item-manager-app"
 
 function App() {
   return (
