@@ -5,6 +5,6 @@ import App from './item-manager-app.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <app />
+    <App />
   </StrictMode>,
 )
